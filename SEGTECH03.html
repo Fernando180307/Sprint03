@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<title>SEGTECH POR VOCÊ</title>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    header img {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 80px; /* ajuste proporcional */
+      height: auto;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      color: #003366;
+      margin-bottom: 0.5rem;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      background-color: #0073e6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005bb5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #003366;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>SEGTECH</h1>
+    <p>Protegendo seus dados no mundo digital</p>
+    <img src="SEGTECH.jpg" alt="Logo SEGTECH">
+  </header>
+
+  <main>
+    <section id="conceito">
+      <h2>O que é Segurança da Informação?</h2>
+      <p>Segurança da informação é o conjunto de práticas destinadas a proteger informações contra acesso não autorizado,
+        uso indevido, divulgação, interrupção, modificação ou destruição.</p>
+    </section>
+
+    <section>
+      <h2>O uso de aprendizado de máquina na identificação de fraudes cibernéticas como fake news</h2>
+      <p>Com o crescimento das redes sociais e da disseminação rápida de informações, tornou-se cada vez mais difícil distinguir conteúdos verdadeiros de falsos... (conteúdo mantido)</p>
+    </section>
+
+    <section>
+      <h2>Como pode ser executado?</h2>
+      <p>O uso de aprendizado de máquina na detecção de fake news começa com a coleta de dados de notícias verdadeiras e falsas... (conteúdo mantido)</p>
+    </section>
+
+    <section id="dicas">
+      <h2>Dicas de Segurança</h2>
+      <ul>
+        <li>Use senhas fortes e diferentes para cada serviço.</li>
+        <li>Ative a autenticação de dois fatores sempre que possível.</li>
+        <li>Não clique em links suspeitos recebidos por e-mail ou mensagem.</li>
+        <li>Mantenha seus softwares e antivírus atualizados.</li>
+      </ul>
+      <button onclick="mostrarAlerta()">Clique para uma dica extra</button>
+    </section>
+
+    <section id="contato">
+      <h2>Fale Conosco</h2>
+      <form onsubmit="enviarFormulario(event)">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
+        <label for="mensagem">Mensagem:</label><br>
+        <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br><br>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Segurança da Informação - Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function mostrarAlerta() {
+      alert("Evite usar redes Wi-Fi públicas para acessar informações sensíveis!");
+    }
+
+    function enviarFormulario(event) {
+      event.preventDefault();
+      const nome = document.getElementById("nome").value;
+      const mensagem = document.getElementById("mensagem").value;
+      alert(`Obrigado pelo contato, ${nome}! Sua mensagem foi recebida.`);
+      document.querySelector("form").reset();
+    }
+  </script>
+</body>
+
+</html>
